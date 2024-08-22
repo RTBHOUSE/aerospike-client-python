@@ -9,7 +9,7 @@ done
 
 # Bundle external shared libraries into the wheels
 for whl in /code/work/tempwheels/*.whl; do
-    auditwheel repair "$whl" --plat manylinux_2_24_x86_64 -w /code/work/wheels/
+    auditwheel repair "$whl" --plat manylinux_2_28_x86_64 -w /code/work/wheels/
 done
 
 for PYBIN in /opt/python/*/bin/; do

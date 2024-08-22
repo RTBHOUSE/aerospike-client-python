@@ -1,11 +1,9 @@
-FROM quay.io/pypa/manylinux_2_24_x86_64
+FROM quay.io/pypa/manylinux_2_28_x86_64
 
-RUN apt-get update && \
-    apt-get install -y libssl-dev; \
+RUN dnf install -y openssl-devel cpio && \
     mkdir -p /code
 
 WORKDIR /code
 
-CMD /code/scripts/incontainer-build.sh
-
+CMD ["/code/scripts/incontainer-build.sh"]
 

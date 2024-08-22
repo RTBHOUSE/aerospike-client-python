@@ -104,7 +104,7 @@ main() {
 	distro_version=${distro_version//[[:space:]]/}
 
 	case "$distro_id" in
-	'centos' | 'redhat' | 'rhel' | 'scientific' | 'ol' )
+	'centos' | 'redhat' | 'rhel' | 'scientific' | 'ol' | 'almalinux' )
 		distro_version=${distro_version%.*}
 		distro_long="${distro_id}${distro_version}"
 		distro_short="el${distro_version}"
